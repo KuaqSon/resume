@@ -37,7 +37,7 @@ const projectsList = [
     image_url:
       "https://raw.githubusercontent.com/KuaqSon/gcb-extension/master/screenshots/demo.png",
     demo_url: "https://github.com/KuaqSon/gcb-extension/releases",
-    specs: ["Reactjs", "Html & Css", "Chrome extension "],
+    specs: ["Reactjs", "Html & Css", "Chrome extension"],
     desc:
       "An extension version of develoveper-vn/gcb, Help you create git branch name faster and more compatible when working with git flow.",
     background: "#eee"
@@ -45,6 +45,7 @@ const projectsList = [
 ];
 
 const ProjectItem = ({
+  size,
   name,
   gitUrl,
   image_url,
@@ -68,7 +69,13 @@ const ProjectItem = ({
         <div className="prj-item__title">{name}</div>
 
         <div className="prj-item__desc">{desc}</div>
-        <Box gap="small" direction="row" margin={{ vertical: "small" }}>
+        <Box
+          gap="small"
+          direction="row"
+          justify={size === "small" ? "center" : "start"}
+          wrap={true}
+          margin={{ vertical: "small" }}
+        >
           {specs &&
             specs.map(s => (
               <div
@@ -111,6 +118,7 @@ function Projects() {
                 projectsList.map(prj => (
                   <ProjectItem
                     key={prj.name}
+                    size={size}
                     index={projectsList.indexOf(prj)}
                     {...prj}
                   />
@@ -118,7 +126,11 @@ function Projects() {
               {size !== "small" &&
                 projectsList.map(prj => (
                   <Fade bottom key={prj.name}>
-                    <ProjectItem index={projectsList.indexOf(prj)} {...prj} />
+                    <ProjectItem
+                      index={projectsList.indexOf(prj)}
+                      size={size}
+                      {...prj}
+                    />
                   </Fade>
                 ))}
             </Box>
