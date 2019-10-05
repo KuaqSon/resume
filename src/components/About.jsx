@@ -30,7 +30,7 @@ function About() {
               <Box width={{ max: "768px" }}>
                 <Text>
                   Hello! I'm Quang Son, a web developer based in Ho Chi Minh,
-                  Viet Name who enjoys building things that live on the
+                  Viet Nam who enjoys building things that live on the
                   internet. I develop exceptional websites and web apps that
                   provide intuitive, pixel-perfect user interfaces with
                   efficient and modern backends.

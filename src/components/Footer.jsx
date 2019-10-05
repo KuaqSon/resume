@@ -23,7 +23,7 @@ function Footer() {
       >
         <Text color="#fff">2019</Text>
         <Article />
-        <Text color="#fff">Made by Nguyen Quang Son</Text>
+        <Text color="#fff">Made by Quang Son Nguyen</Text>
       </Box>
     </Box>
   );
