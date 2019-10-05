@@ -9,10 +9,7 @@ import {
 } from "grommet-icons";
 
 const CollapsedNav = () => (
-  <Box
-    direction="row"
-    justify="center"
-  >
+  <Box direction="row" justify="center">
     <Menu
       plain
       justifyContent="center"
@@ -26,7 +23,7 @@ const CollapsedNav = () => (
           ),
           onClick: () => goToSection("#about"),
           icon: (
-            <Box pad={{ vertical: "16px", left: "32px", right: "16px" }}>
+            <Box pad={{ vertical: "12px", left: "32px", right: "16px" }}>
               <DocumentUser size="medium" />
             </Box>
           )
@@ -39,7 +36,7 @@ const CollapsedNav = () => (
           ),
           onClick: () => goToSection("#projects"),
           icon: (
-            <Box pad={{ vertical: "16px", left: "32px", right: "16px" }}>
+            <Box pad={{ vertical: "12px", left: "32px", right: "16px" }}>
               <Code size="medium" />
             </Box>
           )
@@ -52,7 +49,7 @@ const CollapsedNav = () => (
           ),
           onClick: () => goToSection("#contact"),
           icon: (
-            <Box pad={{ vertical: "16px", left: "32px", right: "16px" }}>
+            <Box pad={{ vertical: "12px", left: "32px", right: "16px" }}>
               <ContactInfo size="medium" />
             </Box>
           )
@@ -60,9 +57,9 @@ const CollapsedNav = () => (
       ]}
     >
       <Box direction="row" gap="small" pad="medium" align="center">
-        <Desktop color="brand" size="large" />
-        <Text weight="bold" size="large">
-          Son Nguyen
+        <Desktop color="brand" />
+        <Text weight="bold" size="1.25rem">
+          Quang Son Nguyen
         </Text>
         <FormDown />
       </Box>
@@ -80,9 +77,9 @@ const ExpandedNav = () => (
     pad={{ vertical: "small", horizontal: "medium" }}
   >
     <Box direction="row" gap="small" align="center">
-      <Desktop color="brand" size="large" />
-      <Text weight="bold" size="large">
-        Son Nguyen
+      <Desktop color="brand" size="36px" />
+      <Text weight="bold" size="1.25rem">
+        Quang Son Nguyen
       </Text>
     </Box>
 
