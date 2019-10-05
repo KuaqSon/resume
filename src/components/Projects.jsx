@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Anchor } from "grommet";
+import { Box, Anchor, ResponsiveContext } from "grommet";
 import SectionTitle from "./SectionTitle";
 import Fade from "react-reveal/Fade";
 import "../stylesheets/project.css";
@@ -54,68 +54,78 @@ const ProjectItem = ({
   background,
   date
 }) => (
-  <Fade bottom>
-    <div className="prj-item">
-      <div className="prj-item__container">
-        <div className="prj-item__img">
-          <img
-            src={image_url}
-            alt={name}
-            style={{ backgroundColor: background }}
-          />
-        </div>
-        <div className="prj-item__content">
-          <span className="prj-item__time">{date}</span>
-          <div className="prj-item__title">{name}</div>
+  <div className="prj-item">
+    <div className="prj-item__container">
+      <div className="prj-item__img">
+        <img
+          src={image_url}
+          alt={name}
+          style={{ backgroundColor: background }}
+        />
+      </div>
+      <div className="prj-item__content">
+        <span className="prj-item__time">{date}</span>
+        <div className="prj-item__title">{name}</div>
 
-          <div className="prj-item__desc">{desc}</div>
-          <Box gap="small" direction="row" margin={{ vertical: "small" }}>
-            {specs &&
-              specs.map(s => (
-                <div
-                  className="prj-item__spec"
-                  key={`${s} + ${name}`}
-                >{`[${s}]`}</div>
-              ))}
-          </Box>
-          <Box gap="medium" direction="row-responsive">
-            <Anchor
-              label="Github Repository"
-              icon={<Github />}
-              href={gitUrl}
-              target="_blank"
-              color="brand"
-            />
-            <Anchor
-              label="Live Demo"
-              icon={<Send />}
-              href={demo_url}
-              target="_blank"
-              color="brand"
-            />
-          </Box>
-        </div>
+        <div className="prj-item__desc">{desc}</div>
+        <Box gap="small" direction="row" margin={{ vertical: "small" }}>
+          {specs &&
+            specs.map(s => (
+              <div
+                className="prj-item__spec"
+                key={`${s} + ${name}`}
+              >{`[${s}]`}</div>
+            ))}
+        </Box>
+        <Box gap="medium" direction="row-responsive">
+          <Anchor
+            label="Github Repository"
+            icon={<Github />}
+            href={gitUrl}
+            target="_blank"
+            color="brand"
+          />
+          <Anchor
+            label="Live Demo"
+            icon={<Send />}
+            href={demo_url}
+            target="_blank"
+            color="brand"
+          />
+        </Box>
       </div>
     </div>
-  </Fade>
+  </div>
 );
 
 function Projects() {
   return (
-    <Box height={{ min: "100vh" }} id="projects">
-      <div className="container section-container">
-        {SectionTitle("Here're some funny projects i've built")}
-        <Box gap="medium" margin={{ vertical: "medium" }}>
-          {projectsList.map(prj => (
-            <ProjectItem
-              key={prj.name}
-              index={projectsList.indexOf(prj)}
-              {...prj}
-            />
-          ))}
+    <ResponsiveContext.Consumer>
+      {size => (
+        <Box height={{ min: "100vh" }} id="projects">
+          <div className="container section-container">
+            {SectionTitle("Here're some funny projects i've built")}
+
+            <Box gap="medium" margin={{ vertical: "medium" }}>
+              {size === "small" &&
+                projectsList.map(prj => (
+                  <ProjectItem
+                    key={prj.name}
+                    index={projectsList.indexOf(prj)}
+                    {...prj}
+                  />
+                ))}
+              {size !== "small" &&
+                projectsList.map(prj => (
+                  <Fade bottom key={prj.name}>
+                    <ProjectItem index={projectsList.indexOf(prj)} {...prj} />
+                  </Fade>
+                ))}
+            </Box>
+          </div>
         </Box>
-      </div>
-    </Box>
+      )}
+    </ResponsiveContext.Consumer>
   );
 }
 

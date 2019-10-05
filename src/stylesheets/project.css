@@ -19,7 +19,8 @@
 @media screen and (max-width: 768px) {
   .prj-item {
     height: auto;
-    margin: 180px auto;
+    /* margin: 180px auto; */
+    margin-top: 180px;
   }
 }
 @media screen and (max-height: 500px) and (min-width: 992px) {
