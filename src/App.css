@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: top 0.6s;
+  background-color: #fff;
+  z-index: 19;
+}
+
+.navbar--hidden {
+  top: -100px;
+}
+
+.navbar--sahdow {
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 10px 30px -10px;
+}
+
+.container {
+  padding-left: 96px;
+  padding-right: 96px;
+}
+
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+  line-height: initial;
+  margin-top: 96px;
+}
+
+.greeting-sm {
+  font-size: 2em;
+  margin-bottom: -12px;
+}
+
+.greeting-main {
+  font-size: 5em;
+}
+
+.greeting-second {
+  font-size: 4em;
+  color: #a9a5a5;
+}
+
+.section-container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.tech-types {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar-img {
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .greeting-container {
+    padding: 32px;
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 576px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .greeting-container {
+    padding: 32px;
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
