@@ -9,17 +9,18 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import HomeImage from "./components/HomeImage";
 
-import useWindowSize from "react-use/lib/useWindowSize";
-import Confetti from "react-confetti";
+// import useWindowSize from "react-use/lib/useWindowSize";
+// import Confetti from "react-confetti";
 
 function App() {
-  const { width, height } = useWindowSize();
+  // const { width, height } = useWindowSize();
 
   return (
     <Grommet plain>
       <Header />
-      <Confetti
+      {/* <Confetti
         numberOfPieces={40}
         initialVelocityY={100}
         width={width - 32}
@@ -35,7 +36,8 @@ function App() {
           ctx.stroke();
           ctx.closePath();
         }}
-      />
+      /> */}
+      <HomeImage />
       <Box
         width={{ max: "1500px" }}
         margin={{ horizontal: "auto", top: "100px" }}

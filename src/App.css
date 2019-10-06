@@ -82,6 +82,18 @@
   border-radius: 25px;
 }
 
+.home-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 30vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10;
+}
+
 @media only screen and (max-width: 576px) {
   .container {
     padding-left: 32px;
@@ -91,6 +103,10 @@
   .greeting-container {
     padding: 32px;
     font-size: 60%;
+  }
+
+  .home-img {
+    width: 60vw;
   }
 }
 
@@ -103,6 +119,10 @@
   .greeting-container {
     padding: 32px;
     font-size: 80%;
+  }
+
+  .home-img {
+    width: 50vw;
   }
 }
 
