@@ -12,8 +12,8 @@ const SectionTitle = title => {
           align="start"
           pad={{ vertical: "medium" }}
         >
-          <Terminal size="large" />
-          <Text size={size === "small" ? "24px" : "36px"}>{title}</Text>
+          <Terminal color="brand" size="large" />
+          <Text color="brand" size={size === "small" ? "24px" : "36px"}>{title}</Text>
         </Box>
       )}
     </ResponsiveContext.Consumer>

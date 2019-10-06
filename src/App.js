@@ -11,6 +11,9 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import HomeImage from "./components/HomeImage";
 
+//Theme
+import { customTheme } from "./theme";
+
 // import useWindowSize from "react-use/lib/useWindowSize";
 // import Confetti from "react-confetti";
 
@@ -18,7 +21,7 @@ function App() {
   // const { width, height } = useWindowSize();
 
   return (
-    <Grommet plain>
+    <Grommet plain theme={customTheme}>
       <Header />
       {/* <Confetti
         numberOfPieces={40}
