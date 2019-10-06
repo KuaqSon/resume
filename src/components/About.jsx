@@ -28,7 +28,7 @@ function About() {
           <Box>
             <Fade bottom>
               <Box width={{ max: "768px" }}>
-                <Text>
+                <Text color="brand">
                   Hello! I'm Quang Son, a web developer based in Ho Chi Minh,
                   Viet Nam who enjoys building things that live on the
                   internet. I develop exceptional websites and web apps that
@@ -39,7 +39,7 @@ function About() {
             </Fade>
             <Fade bottom>
               <Box pad={{ vertical: "medium" }}>
-                <Text>
+                <Text color="brand">
                   Here's a few technologies I've been working with recently:
                 </Text>
                 <div className="tech-types">
@@ -49,28 +49,28 @@ function About() {
                       gap="small"
                       pad={{ vertical: "xsmall" }}
                     >
-                      <Html5 /> Javascript
+                      <Html5 color="brand" /> Javascript
                     </Box>
                     <Box
                       direction="row"
                       gap="small"
                       pad={{ vertical: "xsmall" }}
                     >
-                      <Css3 /> HTML & CSS
+                      <Css3 color="brand" /> HTML & CSS
                     </Box>
                     <Box
                       direction="row"
                       gap="small"
                       pad={{ vertical: "xsmall" }}
                     >
-                      <Reactjs /> ReactJs
+                      <Reactjs color="brand" /> ReactJs
                     </Box>
                     <Box
                       direction="row"
                       gap="small"
                       pad={{ vertical: "xsmall" }}
                     >
-                      <Shield /> Angular
+                      <Shield color="brand" /> Angular
                     </Box>
                   </Box>
                   <Box width={{ min: "220px" }} pad={{ vertical: "small" }}>
@@ -79,28 +79,28 @@ function About() {
                       gap="small"
                       pad={{ vertical: "xsmall" }}
                     >
-                      <Windows /> ASP.NET & ASP.NET Core
+                      <Windows color="brand" /> ASP.NET & ASP.NET Core
                     </Box>
                     <Box
                       direction="row"
                       gap="small"
                       pad={{ vertical: "xsmall" }}
                     >
-                      <Node /> NodeJs
+                      <Node color="brand" /> NodeJs
                     </Box>
                     <Box
                       direction="row"
                       gap="small"
                       pad={{ vertical: "xsmall" }}
                     >
-                      <SettingsOption /> ExpressJs
+                      <SettingsOption color="brand" /> ExpressJs
                     </Box>
                     <Box
                       direction="row"
                       gap="small"
                       pad={{ vertical: "xsmall" }}
                     >
-                      <Diamond /> Ruby on Rails
+                      <Diamond color="brand" /> Ruby on Rails
                     </Box>
                   </Box>
                 </div>

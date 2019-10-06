@@ -17,40 +17,40 @@ const CollapsedNav = () => (
       items={[
         {
           label: (
-            <Box alignSelf="center" pad={{ right: "32px" }}>
+            <Box color="brand" alignSelf="center" pad={{ right: "32px" }}>
               About me
             </Box>
           ),
           onClick: () => goToSection("#about"),
           icon: (
             <Box pad={{ vertical: "12px", left: "32px", right: "16px" }}>
-              <DocumentUser size="medium" />
+              <DocumentUser color="brand" size="medium" />
             </Box>
           )
         },
         {
           label: (
-            <Box alignSelf="center" pad={{ right: "32px" }}>
+            <Box color="brand" alignSelf="center" pad={{ right: "32px" }}>
               Projects
             </Box>
           ),
           onClick: () => goToSection("#projects"),
           icon: (
             <Box pad={{ vertical: "12px", left: "32px", right: "16px" }}>
-              <Code size="medium" />
+              <Code color="brand" size="medium" />
             </Box>
           )
         },
         {
           label: (
-            <Box alignSelf="center" pad={{ right: "32px" }}>
+            <Box color="brand" alignSelf="center" pad={{ right: "32px" }}>
               Contact
             </Box>
           ),
           onClick: () => goToSection("#contact"),
           icon: (
             <Box pad={{ vertical: "12px", left: "32px", right: "16px" }}>
-              <ContactInfo size="medium" />
+              <ContactInfo color="brand" size="medium" />
             </Box>
           )
         }
@@ -58,7 +58,7 @@ const CollapsedNav = () => (
     >
       <Box direction="row" gap="small" pad="medium" align="center">
         <Desktop color="brand" />
-        <Text weight="bold" size="1.25rem">
+        <Text color="brand" weight="bold" size="1.25rem">
           Quang Son Nguyen
         </Text>
         <FormDown />
@@ -78,7 +78,7 @@ const ExpandedNav = () => (
   >
     <Box direction="row" gap="small" align="center">
       <Desktop color="brand" size="36px" />
-      <Text weight="bold" size="1.25rem">
+      <Text color="brand" weight="bold" size="1.25rem">
         Quang Son Nguyen
       </Text>
     </Box>

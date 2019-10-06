@@ -1,6 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import avaimg from "../images/avatar-1.jpg";
+import avaimg from "../images/avatar-1.png";
 import { Box, Image } from "grommet";
 
 const calc = (x, y) => [
