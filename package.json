@@ -5,20 +5,15 @@
   "homepage": "https://kuaqson.github.io/resume",
   "dependencies": {
     "gh-pages": "^2.1.1",
-    "grommet": "^2.7.8",
-    "grommet-icons": "^4.3.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "react-reveal": "^1.2.2",
-    "react-scripts": "3.1.2",
-    "react-spring": "^8.0.27",
-    "styled-components": "^4.4.0"
+    "react-scripts": "3.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
