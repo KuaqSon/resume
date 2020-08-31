@@ -1,7 +1,6 @@
 import React from "react";
 import "./stylesheets/App.css";
 import AvatarImg from "./images/avatar.jpg";
-// import { ReactComponent as LinkSvg } from "./images/link.svg";
 
 const content = [
   {
@@ -165,7 +164,11 @@ const Header = () => {
             </div>
             <div className="contact_item">
               <div className="contact_title">Github.</div>
-              <div className="contact_cont">https://github.com/KuaqSon</div>
+              <div className="contact_cont">
+                <a target="_blank" href="https://github.com/KuaqSon">
+                  github.com/KuaqSon
+                </a>
+              </div>
             </div>
             <div className="contact_item">
               <div className="contact_title">Personal website.</div>
@@ -183,14 +186,14 @@ const Header = () => {
 };
 
 const Footer = () => {
-  return <div className="footer">Nguyễn Quang Sơn - Updated August 2020</div>;
+  return <div className="container footer">Nguyễn Quang Sơn - Updated August 2020</div>;
 };
 
 const Main = () => {
   return (
-    <div className="container main">
+    <div className="main">
       {content.map((c, index) => (
-        <div key={index} className="section">
+        <div key={index} className="container section">
           <div className="section_title">{c.section}</div>
           <div className="section_cont">
             {c.subs.map((s, sindex) => (

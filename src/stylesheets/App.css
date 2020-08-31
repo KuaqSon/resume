@@ -1,20 +1,18 @@
 .app {
-  margin: 20px;
+  color: #080808;
 }
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  /* border: 1px solid; */
-}
-
-.container.main {
-  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .header {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 68px;
 }
 
 .author {
@@ -22,9 +20,14 @@
   flex: 1;
 }
 
+.author h1 {
+  font-family: "Roboto", sans-serif;
+}
+
 .job_title {
   font-size: 1.25rem;
   margin-top: -1rem;
+  color: #323232;
 }
 
 .personal_link {
@@ -62,35 +65,42 @@
 }
 
 .contact_item .contact_title {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 800;
+  margin-bottom: -0.5rem;
 }
 
 .contact_item .contact_cont {
-  color: #333;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #323232;
 }
 
 .section {
   display: flex;
-  padding: 20px 0;
-  padding-top: 30px;
+  margin: 20px auto;
   flex-wrap: wrap;
-}
-
-.section + .section {
-  border-top: 1px solid;
+  align-items: flex-start;
 }
 
 .section_title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   margin-right: 1rem;
-  min-width: 300px;
-  width: 300px;
+  min-width: 200px;
+  width: 200px;
   padding-right: 1rem;
   margin-bottom: 0.8rem;
+  position: relative;
 }
+.section_title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 28%;
+  border-bottom: 2px solid #080808;
+}
+
 .section_cont {
   flex: 1;
 }
@@ -98,21 +108,24 @@
 .subs {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
+  border: 1px solid #323232;
+  background-color: #ffffff;
 }
 
 .subs + .subs {
-  padding-top: 1rem;
-  border-top: 1px solid;
+  margin-top: 1rem;
 }
 
 .subs_title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-right: 1rem;
   min-width: 200px;
   width: 200px;
   padding-right: 1rem;
   margin-bottom: 0.8rem;
+  color: #323232;
 }
 
 .subs_cont {
@@ -129,8 +142,16 @@
 }
 .skill_desc {
   margin-bottom: 1rem;
+  color: #323232;
 }
 
 .footer {
+  font-family: "Roboto", sans-serif;
   text-align: center;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #323232;
 }
